@@ -27,6 +27,7 @@ function showHide(){
 var getName2 = document.getElementById('name2');
 getName2.addEventListener('click',showHide2);
 var newDisc = document.createElement('div');
+newDisc.id = 'descrip2';
 newDisc.innerHTML = "The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season";
 newDisc.style.display = 'none';
 getName2.appendChild(newDisc)
