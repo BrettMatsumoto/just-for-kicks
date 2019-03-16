@@ -5,14 +5,38 @@ getDeets.addEventListener('click', noMore)
 
 function noMore(){
     var alert = document.createElement('div');
-    alert.innerHTML = 'Not Available in Hawaii.';
-    getDeets.appendChild(alert)
+    window.alert('Not Available in Hawaii')
 }
 
 //2. Add an event to the div element with the id of 'name1' that will show/hide the description ('descrip1') after hovering over Air Jordan II.
 
+var theHover = document.getElementById('name1');
+theHover.addEventListener('mouseover', showHide)
+function showHide(){
+    var theDisc = document.getElementById('descrip1')
+        if (theDisc.style.display === 'block'){
+            theDisc.style.display = 'none'
+        } else {
+            theDisc.style.display = 'block'
+        }
+}
+
 //3. Add an event to the div element with the id of 'name2' that will show/hide the following description after clicking on the element.
 //'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.'
+
+var getName2 = document.getElementById('name2');
+getName2.addEventListener('click',showHide2);
+var newDisc = document.createElement('div');
+newDisc.innerHTML = "The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season";
+newDisc.style.display = 'none';
+getName2.appendChild(newDisc)
+function showHide2(){
+    if (newDisc.style.display === 'block'){
+        newDisc.style.display = 'none'
+    } else {
+        newDisc.style.display = 'block'
+    }
+}
 
 
 //You'll need to:
