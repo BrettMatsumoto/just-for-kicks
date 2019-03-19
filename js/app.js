@@ -4,7 +4,6 @@ var getDeets = document.getElementById('details');
 getDeets.addEventListener('click', noMore)
 
 function noMore(){
-    var alert = document.createElement('div');
     window.alert('Not Available in Hawaii')
 }
 
@@ -45,6 +44,22 @@ function showHide2(){
 //append this element to the div element with the id of 'name2' 
 
 //4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
+
+var theThumbs = document.getElementsByClassName('far fa-thumbs-up');
+for (var i = 0; i < theThumbs.length;i++){
+    var count = document.createElement('div');
+    count.className = 'daCount';
+    count.innerHTML = 0;
+    theThumbs[i].appendChild(count)
+    theThumbs[i].addEventListener('click',increment)
+}
+
+function increment(){
+    var newCount = this.querySelector('.daCount');
+    newCount.innerHTML++
+}
+
+
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
 
