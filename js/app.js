@@ -78,8 +78,24 @@ function dec(){
 }
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
+'https://stockx.imgix.net/Air-Jordan-11-Retro-Low-Nightshade-Green-Snakeskin.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1538080256'
+
+var oldImg = document.getElementsByTagName('img')
+console.log(oldImg)
+oldImg[6].addEventListener('mouseover',swap)
+oldImg[6].addEventListener('mouseout', swap)
+console.log(oldImg[6])
+
+function swap(){
+    if (oldImg[6].src === 'https://www.sneakerlegends.com/images/stories/virtuemart/product/378037623%20378037623%20378037623%20378037623.jpg'){
+        oldImg[6].src = 'https://stockx.imgix.net/Air-Jordan-11-Retro-Low-Nightshade-Green-Snakeskin.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1538080256'
+    } else {
+        oldImg[6].src = 'https://www.sneakerlegends.com/images/stories/virtuemart/product/378037623%20378037623%20378037623%20378037623.jpg'
+    }
+}
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
+
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
