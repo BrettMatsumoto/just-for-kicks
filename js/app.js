@@ -99,22 +99,34 @@ oldImg[7].addEventListener('click',bigger)
 
 function bigger(){
     var oldWidth = oldImg[7].width;
-    console.log('oldWidth:' + oldWidth);
+    // console.log('oldWidth:' + oldWidth);
     var oldHeight = oldImg[7].height;
-    console.log('oldHeight:' + oldHeight)
+    // console.log('oldHeight:' + oldHeight)
     var increaseHeight = oldHeight/2;
-    console.log('increaseHeight:' + increaseHeight)
+    // console.log('increaseHeight:' + increaseHeight)
     var increaseWidth = oldWidth/2;
-    console.log('increaseWidth:' + increaseWidth)
+    // console.log('increaseWidth:' + increaseWidth)
     var newWidth = oldWidth + increaseWidth;
-    console.log('newWidth' + newWidth)
+    // console.log('newWidth' + newWidth)
     var newHeight = oldHeight + increaseHeight;
-    console.log('newHeight:' + newHeight);
-    oldImg[7].height = newHeight;
-    oldImg[7].width = newWidth;
+    // console.log('newHeight:' + newHeight);
+    oldImg[7].style.height = newHeight + 'px';
+    oldImg[7].style.width = newWidth + 'px';
 }
 
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
+var plusButt = document.getElementById('oneUp');
+plusButt.addEventListener('click',increaseVal);
+var minButt = document.getElementById('oneDown');
+minButt.addEventListener('click',decreaseVal)
+var buttPrice = document.getElementById('price8');
+console.log(buttPrice)
 
+function increaseVal(){
+    buttPrice.childNodes[0].nodeValue++
+}
+function decreaseVal(){
+    buttPrice.childNodes[0].nodeValue--
+}
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
