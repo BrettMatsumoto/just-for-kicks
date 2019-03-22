@@ -130,3 +130,9 @@ function decreaseVal(){
     buttPrice.childNodes[0].nodeValue--
 }
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
+
+oldImg[9].addEventListener('click',showMe)
+
+function showMe(){
+    oldImg[9].src = 'https://media.npr.org/assets/img/2016/03/29/ap_090911089838_sq-3271237f28995f6530d9634ff27228cae88e3440-s800-c85.jpg'
+}
